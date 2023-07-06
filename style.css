@@ -1,0 +1,69 @@
+*{
+ box-sizing: border-box;
+}
+
+body{
+ margin: 0;
+ overflow-x: hidden;
+ background-color: rgb(61, 60, 60);
+}
+
+#container{
+ width: 100vw;
+ min-height: 100vh; 
+ background-color: rgb(200, 114, 114);
+ transform-origin: left top;
+ transition: 0.5s;
+ padding: 30px;
+}
+
+ /* #container.show-rotation{
+ transform: rotate(-15deg);
+}  */
+
+#circle-container{
+ position: fixed;
+ top: -70px;
+ left: -70px;
+ /* background-color: brown; */
+}
+
+#circle{
+ position: relative;
+ width: 8rem;
+ height: 8rem;
+ border-radius: 50%;
+ background-color: brown;
+ 
+}
+
+#circle.show-rotation{
+ transform: rotate(-55deg);
+}
+
+#circle button{
+ /* background-color: blue; */
+ border: none;
+ cursor: pointer;
+ position: absolute;
+}
+
+#open{
+ position: absolute;
+ top: 65%;
+ left: 65%;
+ background-color: transparent;
+}
+
+#close{
+ position: absolute;
+ top: 69%;
+ left: 30%;
+ transform: rotate(-30deg);
+ background-color: transparent;
+ transition: 0.5s;
+}
+
+#content img{
+width: 100%;
+}
