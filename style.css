@@ -1,69 +1,120 @@
-*{
- box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
- margin: 0;
- overflow-x: hidden;
- background-color: rgb(61, 60, 60);
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: rgb(61, 60, 60);
+  box-sizing: border-box;
 }
 
-#container{
- width: 100vw;
- min-height: 100vh; 
- background-color: rgb(200, 114, 114);
- transform-origin: left top;
- transition: 0.5s;
- padding: 30px;
+#container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgb(200, 126, 126);
+  transform-origin: left top;
+  transition: 0.5s;
+  padding: 20px 50px;
+  z-index: -1;
 }
 
- /* #container.show-rotation{
+ #container.show-rotation{
  transform: rotate(-15deg);
-}  */
+}  
 
-#circle-container{
- position: fixed;
- top: -70px;
- left: -70px;
- /* background-color: brown; */
+#circle-container {
+  
+  position: fixed;
+  top: -70px;
+  left: -70px;
+  /* background-color: brown; */
 }
 
-#circle{
- position: relative;
- width: 8rem;
- height: 8rem;
- border-radius: 50%;
- background-color: brown;
- 
+#circle {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: brown;
+  transition: 0.5s;
 }
 
-#circle.show-rotation{
- transform: rotate(-55deg);
+#circle.show-rotation {
+  transform: rotate(-55deg);
 }
 
-#circle button{
- /* background-color: blue; */
- border: none;
- cursor: pointer;
- position: absolute;
+#circle button {
+  /* background-color: blue; */
+  border: none;
+  cursor: pointer;
+  position: absolute;
 }
 
-#open{
- position: absolute;
- top: 65%;
- left: 65%;
- background-color: transparent;
+#open {
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  background-color: transparent;
 }
 
-#close{
- position: absolute;
- top: 69%;
- left: 30%;
- transform: rotate(-30deg);
- background-color: transparent;
- transition: 0.5s;
+#close {
+  position: absolute;
+  top: 69%;
+  left: 30%;
+  transform: rotate(-30deg);
+  background-color: transparent;
+  transition: 0.5s;
+}
+#content {
+  width: 80%;
+  margin: auto;
+}
+#content h1 {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-#content img{
-width: 100%;
+#content small {
+  margin-bottom: 5px;
+  display: block;
 }
+#content img {
+  width: 100%;
+}
+nav {
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  transform: translateX(-100px);
+  transition: 0.5s;
+}
+
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#nav ul li {
+  color: rgb(255, 0, 0);
+
+  font-size: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+#nav ul li + li {
+  margin-left: 8px;
+}
+
+#nav ul li + li + li {
+  margin-left: 18px;
+}
+
+#nav ul li i {
+  margin-right: 10px;
+}
+
+#nav.show-rotation {
+ transform: translateX(0px);
+} 
